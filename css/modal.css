@@ -1,0 +1,230 @@
+.modal__overlay {
+   display: flex;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: var(--overlay-color);
+   z-index: 1000;
+   justify-content: center;
+   align-items: center;
+   /* display: none; */
+}
+
+/* .modal__overlay--active {
+   display: flex;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: var(--overlay-color);
+   z-index: 1000;
+   justify-content: center;
+   align-items: center;
+} */
+
+.modal__close {
+   position: absolute;
+   left: 63%;
+   top: 19.2%;
+   width: 20px;
+   height: 20px;
+   background: url("../images/icons/close.svg") center center/cover no-repeat;
+   cursor: pointer;
+}
+
+.modal__content {
+   box-sizing: border-box;
+   position: absolute;
+   /* top: 50%;
+   left: 50%; */
+   width: 580px;
+   min-height: 403px;
+   /* transform: translate(-50%, -50%); */
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal__content::before {
+   content: "Добавить товар";
+   display: block;
+   position: absolute;
+   top: -80px;
+   width: 100%;
+   height: 59px;
+   padding: 0;
+   border-bottom: 1px solid var(--border-color);
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 29px;
+   text-transform: uppercase;
+   text-align: left;
+   color: var(--text-color);
+}
+
+.form__content {
+   width: 530px;
+   padding: 14px;
+   display: grid;
+   column-gap: 24px;
+   row-gap: 12px;
+}
+
+.form__label {
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   width: 250px;
+   font-size: 12px;
+   font-weight: 600;
+   text-transform: uppercase;
+   color: var(--text-color);
+   margin-bottom: 20px;
+}
+
+.form__input {
+   width: 250px;
+   height: 40px;
+}
+
+.form__field--name {
+   grid-column: 1 / 2;
+   grid-row: 1 / 2
+}
+
+.form__field--category {
+   grid-column: 1 / 2;
+   grid-row: 2 / 3;
+}
+
+.form__field--description {
+   grid-column: 2 / 3;
+   grid-row: 1 / 3;
+}
+
+.form__textarea {
+   min-height: 125px;
+}
+
+.form__field--units {
+   grid-column: 1 / 2;
+   grid-row: 3 / 4;
+}
+
+.form__field--count {
+   grid-column: 2 / 3;
+   grid-row: 3 / 4;
+}
+
+.form__field--sale {
+   display: flex;
+   align-content: stretch;
+   align-items: center;
+   max-width: 250px;
+   grid-column: 1 / 2;
+   grid-row: 4 / 5;
+}
+
+/* .form__label--sale  {
+   grid-row: 1 / 2;
+   grid-column: 1 / 2;
+} */
+
+/* .form__field--wrapper {
+   width: 100%;
+   display: flex;
+} */
+
+.form__field--sale-checkbox {
+   /* grid-row: 2 / 3;
+   grid-column: 1 / 2; */
+   appearance: none;
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   background-color: var(--bgc);
+   /* margin-right: 10px; */
+}
+
+
+
+.form__field--sale-checkbox:checked::after {
+   content: "";
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   background: url("../images/icons/check.svg") center center/contain no-repeat;
+   background-size: 20px 15px;
+}
+
+.form__field--sale-text {
+   width: 200px;
+}
+
+.form__field--price {
+   grid-column: 2 / 3;
+   grid-row: 4 / 5;
+}
+
+.form__field--loadimg {
+   grid-column: 2 / 3;
+   grid-row: 5 / 6;
+   width: 250px;
+   height: 39px;
+}
+
+.form__field--img{
+   display: block;
+   width: 250px;
+   height: 39px;
+   border-radius: 6px;
+   
+   padding: 11px 0;
+   background: var(--accent-color);
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 17px;
+   text-transform: uppercase;
+   text-align: center;
+   color: #fff;
+   cursor: pointer;
+}
+
+.form__field--img-button {
+   opacity: 0;
+   visibility: hidden;
+} 
+
+.modal__actions {
+   display: flex;
+   position: absolute;
+   left: 40%;
+   bottom: 13%;
+   column-gap: 90px;
+}
+
+.cost {
+   font-size: 14px;
+   color: var(--text-color);
+}
+
+.price {
+   font-size: 18px;
+   font-weight: 700;
+   color: var(--accent-color);
+}
+
+.btn {
+   border-radius: 6px;
+   width: 200px;
+   height: 39px;
+   background: var(--accent-color);
+   color: #fff;
+   text-align: center;
+   font-weight: 600;
+   font-size: 16px;
+   text-transform: uppercase;
+}
